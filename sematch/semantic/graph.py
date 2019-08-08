@@ -46,7 +46,7 @@ class DBpediaDataTransform(DataTransform):
         self._ontology = DBpedia()
 
     def transform(self):
-        nodes =  map(lambda x:x.toPython(), self._ontology.classes)
+        nodes = list(map(lambda x:x.toPython(), self._ontology.classes))
         node_id = {n:i for i,n in enumerate(nodes)}
         labels = [self._ontology.token(value) for i,value in enumerate(self._ontology.classes)]
         edges = []
