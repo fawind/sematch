@@ -6,3 +6,4 @@
 {"ic": "6.46464483752", "concept": "http://dbpedia.org/ontology/Actor"}
 {"ic": "3.69680036114", "concept": "http://dbpedia.org/ontology/Film"}
 {"ic": "5.32659164202", "concept": "http://dbpedia.org/ontology/City"}
+{"concept": "http://www.w3.org/2002/07/owl#Thing", "ic": "-0.26559815296051065"}

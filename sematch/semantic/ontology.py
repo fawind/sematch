@@ -29,6 +29,7 @@ class DBpedia:
         self.graph.parse(FileIO.filename(src))
         self.root = 'http://www.w3.org/2002/07/owl#Thing'
         self.classes = [s for s in self.graph.subjects(RDF.type, OWL.Class)]
+        self.classes.append(rdflib.URIRef(self.root))
         self.o_properties = [s for s in self.graph.subjects(RDF.type, OWL.ObjectProperty)]
         self.d_properties = [s for s in self.graph.subjects(RDF.type, OWL.DatatypeProperty)]
         self.uri2class = {c.toPython():c for c in self.classes}
